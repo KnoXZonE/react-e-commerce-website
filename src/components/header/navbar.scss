@@ -1,0 +1,111 @@
+.navbar {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  grid-gap: 1rem;
+  min-height: 80px;
+
+  &-menu {
+    display: flex;
+    align-items: center;
+    grid-gap: 2rem;
+    height: 100%;
+
+    &.menu-right {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    li {
+      display: flex;
+      align-items: center;
+      height: 100%;
+
+      a {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        color: #000;
+        font-size: 12px;
+        letter-spacing: 2px;
+        font-weight: 500;
+        text-transform: uppercase;
+        transition: all 300ms ease-in-out;
+
+        &:hover {
+          color: #e5ba73;
+
+          svg {
+            color: #e5ba73;
+          }
+        }
+      }
+
+      .search-btn {
+        background: transparent;
+        outline: none;
+        border: 0;
+        cursor: pointer;
+
+        &:hover {
+          svg {
+            color: #e5ba73;
+          }
+        }
+
+        svg {
+          display: flex;
+          font-size: 20px;
+          color: #000;
+          transition: all 300ms ease-in-out;
+        }
+      }
+
+      .cart-btn {
+        display: flex;
+        align-items: center;
+        grid-gap: 0.3rem;
+
+        svg {
+          display: flex;
+          font-size: 20px;
+          color: #000;
+          transition: all 300ms ease-in-out;
+        }
+      }
+    }
+  }
+
+  .logo {
+    display: flex;
+    justify-content: center;
+
+    .navbar-logo {
+      color: #e5ba73;
+
+      h1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        grid-gap: 0px;
+        line-height: 25px;
+        font-weight: 400;
+        font-size: 18px;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        transition: all 300ms ease-in-out;
+
+        &:hover {
+          color: #999;
+        }
+
+        span {
+          font-size: 24px;
+          font-weight: 300;
+        }
+      }
+    }
+  }
+}

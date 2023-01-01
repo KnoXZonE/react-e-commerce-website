@@ -1,0 +1,101 @@
+.new-arrivals {
+  padding: 3rem 0;
+
+  .custom-container {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 2rem;
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      grid-gap: 2rem;
+
+      .product-card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        grid-gap: 1rem;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+        &:hover {
+          .card-img {
+            opacity: 1;
+          }
+
+          .card-details {
+            .card-title {
+              color: #e5ba73;
+            }
+          }
+        }
+
+        .card-category {
+          position: absolute;
+          top: 1rem;
+          left: 1rem;
+          background: #e5ba73;
+          font-size: 12px;
+          padding: 0.5rem;
+          z-index: 5;
+          color: white;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+        }
+
+        .card-img {
+          height: 450px;
+          overflow: hidden;
+          opacity: 0.5;
+          transition: all 300ms ease-in-out;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+
+        .card-details {
+          display: flex;
+          flex-direction: column;
+          grid-gap: 0.8rem;
+          padding: 1rem;
+
+          .card-title {
+            color: #333;
+            font-size: 18px;
+            font-weight: 500;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 1;
+            overflow: hidden;
+            transition: all 300ms ease-in-out;
+          }
+
+          .card-desc {
+            font-size: 16px;
+            color: #333;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            overflow: hidden;
+          }
+        }
+
+        .card-price {
+          display: flex;
+          align-items: center;
+          grid-gap: 0.2rem;
+          color: #e5ba73;
+
+          svg {
+            font-size: 30px;
+            display: flex;
+            color: #e5ba73;
+          }
+        }
+      }
+    }
+  }
+}
